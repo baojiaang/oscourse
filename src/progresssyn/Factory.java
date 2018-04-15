@@ -2,6 +2,8 @@ package progresssyn;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 public class Factory {
     public static void main(String[] args) {
@@ -25,9 +27,19 @@ public class Factory {
             c.start();
         }
 
-        try {
-            Thread.sleep(60*1000);
-        }catch(InterruptedException e) {}
+//        try {
+//            Thread.sleep(60*1000);
+//        }catch(InterruptedException e) {}
+
+//        ExecutorService executor= Executors.newFixedThreadPool(15);
+//        BoundedBuffer buffer = new BoundedBuffer();
+//        while(true){
+//            executor.execute(new Producer(buffer));
+//            executor.execute(new Consumer(buffer));
+//        }
+//
+
+
     }
 }
 

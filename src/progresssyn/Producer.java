@@ -1,5 +1,6 @@
 package progresssyn;
 
+
 import java.util.Random;
 
 public class Producer implements Runnable {
@@ -16,7 +17,7 @@ public class Producer implements Runnable {
            Product newProduct=new Product(id.toString());
             try {
                 buf.insert(newProduct);
-                Thread.sleep(1000);
+                SleepUtilities.nap();
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

@@ -1,5 +1,7 @@
 package progresssyn;
 
+
+
 public class Consumer implements Runnable {
     private BoundedBuffer buf;
     public Consumer(BoundedBuffer buf){
@@ -9,7 +11,7 @@ public class Consumer implements Runnable {
         while(true){
             try {
                 Product newProduct= (Product) buf.get();
-                Thread.sleep(1000);
+                SleepUtilities.nap();
             }catch (InterruptedException e){
 
             }
