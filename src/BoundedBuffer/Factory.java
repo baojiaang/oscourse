@@ -14,11 +14,10 @@ public class Factory {
 
         BoundedBuffer buffer = new BoundedBuffer();
 
-        for(int i = 0; i<PRODUCTOR_COUNT; ++i) {
             Thread p = new Thread(new Producer(buffer));
-            producers.add(p);
+
             p.start();
-        }
+
 
         for(int i = 0; i<CONSUMER_COUNT; ++i) {
             Thread c = new Thread(new Consumer(buffer));

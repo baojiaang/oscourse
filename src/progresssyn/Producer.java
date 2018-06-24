@@ -13,7 +13,7 @@ public class Producer implements Runnable {
     @Override
     public void run() {
         while(true){
-           Integer id=new Random().nextInt();
+           Integer id=new Random().nextInt(100);
            Product newProduct=new Product(id.toString());
             try {
                 buf.insert(newProduct);

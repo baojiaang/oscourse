@@ -17,13 +17,13 @@ public class Factory {
 
         for(int i = 0; i<PRODUCTOR_COUNT; ++i) {
             Thread p = new Thread(new Producer(buffer));
-            producers.add(p);
+           // producers.add(p);
             p.start();
         }
 
         for(int i = 0; i<CONSUMER_COUNT; ++i) {
             Thread c = new Thread(new Consumer(buffer));
-            consumers.add(c);
+            //consumers.add(c);
             c.start();
         }
 
